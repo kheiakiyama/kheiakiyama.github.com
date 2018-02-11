@@ -1,11 +1,11 @@
 # Site settings
-title: Dong Liang's CV 
-description: ddbullfrog's CV
-favicon: /assets/img/avatar.JPG
-baseurl: https://ddbullfrog.github.io/resumecard
-url: https://ddbullfrog.github.io/resumecard
+title: kheiakiyama's CV 
+description: kheiakiyama's CV
+favicon: /assets/img/avatar.png
+baseurl: .
+url: https://profile.kheiakiyama.com
 rss_url: /pages/atom.xml
-google_analytics: UA-63653234-1
+google_analytics: UA-46111689-1
 
 # Build settings
 markdown: kramdown
@@ -14,72 +14,61 @@ exclude: [vendor]
 
 # Author settings
 author:
-  name: Dong Liang
-  title: Java Developer
-  address: Auckland, New Zealand
-  email: dongg.liang#gmail.com
-  link: http://ddbullfrog.com
-  weibo:
-  github: ddbullfrog
-  linkedin: ddbullfrog
-  twitter: ddbullfrog
+  name: kheiakiyama
+  title: IT Engineer
+  address: Taito-Ku, Tokyo
+  email: kheiakiyama#gmail.com
+  link: https://profile.kheiakiyama.com
+  github: kheiakiyama
+  linkedin: kheiakiyama
+  twitter: kheiakiyama
   gavatar: /resumecard/assets/img/avatar.JPG
   stackoverflow:
 #  stackoverflow: 4582127
   workHistory:
     - work1:
-      company: XXX Ltd
-      location: Auckland, New Zealand
-      title: Java Developer
-      started: 2014
-      duration: (2014 - Present)
-      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
+      company: ISAO Ltd
+      location: Tokyo, Japan
+      title: Azure Engineer
+      started: 2017
+      duration: (2017 - Present)
+      description: comming soon ...
     - work2:
-      company: XXX Ltd
-      location: Shanghai, China
-      title: Java Developer
-      started: 2012
-      duration: (2012 - 2014)
-      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
-    - work3:
-      company: XXX Ltd
-      location: Shanghai, China
-      title: Java Developer
-      started: 2009
-      duration: (2009 - 2012)
-      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
+      company: Kensetsu System Ltd
+      location: Shizuoka, Japan
+      title: Programmer
+      started: 2005
+      duration: (2005 - 2016)
+      description: For the first 2 years, I implemented a function as a programmer with about 3-5 members. After that, I was in charge of specification review, design and team building as a team leader. In the last three years I have been involved in cloud service technology selection and web service development using Azure. In addition to Windows-based technologies, I also experienced development work using OSS technology, and selected and introduced Web services, built servers, and developed Web services for their own development department.
   educationHistory:
     - education1:
-      organization: XXXXXX University
-      location: Shenyang, China
-      degree: Bachelor
-      major: Software Engineering
-      started: 2005
-      duration: (2005 - 2009)
-      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
+      organization: Shizuoka Industrial Technology College
+      location: Shizuoka, Japan
+      degree: Computer Science College
+      major: Computer Science
+      started: 2003
+      duration: (2003 - 2005)
+      description: 
   languages:
     - language1:
-      name: Chinese
+      name: Japanese
       proficiency: Native
     - language2:
       name: English
-      proficiency: Professional
-    - language3:
-      name: Japanese
       proficiency: Limit
   programmingSkills:
     - skill1:
-      name: HTML
-      percentage: 100%
-    - skill2:
-      name: Bootstrap
+      name: C#
       percentage: 90%
+    - skill2:
+      name: ASP.NET MVC
+      percentage: 50%
     - skill3:
       name: JavaScript
-      percentage: 70%
+      percentage: 60%
     - skill4:
-      name: AngularJS
-      percentage: 70%
+      name: Azure
+      percentage: 80%
     - skill5:
-      name: Java/Java EE
-      percentage: 90%
+      name: DevOps
+      percentage: 70%
