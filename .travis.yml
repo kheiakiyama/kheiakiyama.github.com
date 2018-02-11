@@ -13,7 +13,6 @@ before_script:
   - mkdir -p $HOME/dotnet && tar zxf dotnet.tar.gz -C $HOME/dotnet
   - export PATH=$PATH:$HOME/dotnet
   - dotnet --version
-  - $HOME/dotnet --version
   - wget -O azcopy.tar.gz https://aka.ms/downloadazcopyprlinux
   - tar -xf azcopy.tar.gz
   - sudo ./install.sh
