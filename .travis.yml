@@ -1,7 +1,9 @@
+# Require Environment Variables
+# - BLOB_CONTAINER_URL 
+# - STORAGE_KEY
 language: ruby
 rvm:
   - 2.5
-
 before_script:
   - chmod +x ./scripts/cibuild
   - curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
@@ -15,11 +17,13 @@ before_script:
   - dotnet --version
   - wget -O azcopy.tar.gz https://aka.ms/downloadazcopyprlinux
   - tar -xf azcopy.tar.gz
-  - sudo ./install.sh
 script: ./scripts/cibuild
 after_success:
   - ls -la ./azcopy
+  - export PATH=$PATH:$HOME/dotnet
+  - dotnet --version
   - dotnet ./azcopy/azcopy.dll --version
+  - dotnet ./azcopy/azcopy.dll --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive
 branches:
   only:
     - jekyll
