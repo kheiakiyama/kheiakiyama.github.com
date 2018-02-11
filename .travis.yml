@@ -18,7 +18,7 @@ before_script:
   - sudo ./install.sh
 script: ./scripts/cibuild
 after_success:
-  - azcopy -v
+  - ./azcopy/azcopy -v
 branches:
   only:
     - jekyll
