@@ -19,7 +19,7 @@ before_script:
 script: ./scripts/cibuild
 after_success:
   - ls -la ./azcopy
-  - dotnet run ./azcopy/azcopy --version
+  - dotnet ./azcopy/azcopy.dll --version
 branches:
   only:
     - jekyll
