@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://kheiakiyama.github.io/sitemap.xml 

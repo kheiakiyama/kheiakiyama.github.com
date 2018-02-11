@@ -1,187 +1,263 @@
+---
+layout: default
+---
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="col-md-8">
+            {% if site.author.workHistory %}
+                <h3 class="title with-icon"><span class="glyphicon glyphicon-plane cat-title"></span>Work History</h3>
+                <ul class="timeline">
+                    {% for work in site.author.workHistory %}
+                        <li class="timeline-inverted">
+                            {% if work.started %}
+                                <div class="timeline-badge info">{{ work.started }}</div>
+                            {% endif %}
+                            <div class="timeline-panel grid-block">
+                                <div class="timeline-heading">
+                                    {% if work.company %}
+                                        <h4 class="timeline-title">{{ work.company }} </h4>
+                                    {% endif %}
+                                    <p>
+                                        <small class="text-muted">
+                                            {% if work.title %}
+                                                {{ work.title }}
+                                            {% endif %}
+                                        </small>
+                                    </p>
+                                    <p>
+                                        <small class="text-muted">
+                                            {% if work.duration %}
+                                                <i class="fa fa-calendar"></i> {{ work.duration }} |
+                                            {% endif %}
+                                            {% if work.location %}
+                                                <i class="fa fa-map-marker"></i>  {{ work.location }}
+                                            {% endif %}
+                                        </small>
+                                    </p>
+                                </div>
+                                <div class="timeline-body">
+                                    {% if work.description %}
+                                        <p>{{ work.description }}</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            {% if site.author.educationHistory %}
+                <h3 class="title with-icon"><span class="fa fa-book cat-title"></span>Education History</h3>
+                <ul class="timeline">
+                    {% for education in site.author.educationHistory %}
+                        <li class="timeline-inverted">
+                            {% if education.started %}
+                                <div class="timeline-badge info">{{ education.started }}</div>
+                            {% endif %}
+                            <div class="timeline-panel grid-block">
+                                <div class="timeline-heading">
+                                    {% if education.organization %}
+                                        <h4 class="timeline-title">{{ education.organization }}</h4>
+                                    {% endif %}
+                                    <p>
+                                        <small class="text-muted">
+                                            {% if education.degree %}
+                                                {{ education.degree }}
+                                            {% endif %}
+                                            {% if education.major %}
+                                                , {{ education.major }}
+                                            {% endif %}
+                                        </small>
+                                    </p>
+                                    <p>
+                                        <small class="text-muted">
+                                            {% if education.duration %}
+                                                <i class="fa fa-calendar"></i> {{ education.duration }} |
+                                            {% endif %}
+                                            {% if education.location %}
+                                                <i class="fa fa-map-marker"></i>  {{ education.location }}
+                                            {% endif %}
+                                        </small>
+                                    </p>
+                                </div>
+                                <div class="timeline-body">
+                                    {% if education.description %}
+                                        <p>{{ education.description }}</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <div class="col-md-4">
+            {% if site.author.stackoverflow or site.author.programmingSkills %}
+                <h3 class="title with-icon"><span class="fa fa-code cat-title"></span> Programming Skills</h3>
+                {% if site.author.stackoverflow %}
+                <div class="grid-block">
+                  <p><a href="//stackoverflow.com/users/{{ site.author.stackoverflow }}"><img src="//stackoverflow.com/users/flair/{{ site.author.stackoverflow }}.png"></a></p>
+                  <ul class="list-unstyled list-stackoverflow" id="stackoverflow_questions_and_answers"></ul>
+                  <script type="text/javascript">
+                  $(function () {
+                    var api_url_user = "//api.stackexchange.com/2.2/users/{{ site.author.stackoverflow }}/answers?pagesize=5&order=desc&sort=votes&site=stackoverflow";
+                    var api_url_format_questions = "//api.stackexchange.com/2.2/questions/%question_ids%?site=stackoverflow";
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>KheiAkiyama Blog</title>
-  <meta name="author" content="KheiAkiyama">
+                    $.get(api_url_user, function (data_user) {
+                      if (!data_user) {
+                        return;
+                      }
+                      if (!data_user.items) {
+                        return;
+                      }
+                      if (!data_user.items.length) {
+                        return;
+                      }
 
-  
-  <meta name="description" content="お決まりの Hello World! 参考にしたページ OctopressでGitHub無料ブログ構築。sourceをBitbucket管理。簡単ガイド！
-Markdownで書いてGitで管理するブログ「Octopress」の始め方 ">
-  
+                      var question_ids = [];
+                      var complex_questions = {};
+                      $.each(data_user.items, function (index, item) {
+                        if (!item) {
+                          return;
+                        }
+                        if (!item.question_id) {
+                          return;
+                        }
+                        if (!item.answer_id) {
+                          return;
+                        }
+                        if (!item.score) {
+                          return;
+                        }
 
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+                        complex_questions[item.question_id] = {
+                          "question_id": item.question_id,
+                          "answer_id": item.answer_id,
+                          "score": humanize_score(item.score),
+                          "is_accepted": item.is_accepted
+                        };
+                        question_ids.push(item.question_id);
+                      });
 
-  
-  <link rel="canonical" href="http://kheiakiyama.github.io">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="KheiAkiyama Blog" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<script language="JavaScript">
-$(document).ready( function () {
-   $("a[href^='http']:not([href*='" + location.hostname + "'])").attr('target', '_blank');
-})
-</script>
-<meta name="google-site-verification" content="epMNSuf4kBJVpsjfzxXKsVdGr-bxz4JrOzv5lHwFkZQ" />
-  
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-46111689-1']);
-    _gaq.push(['_trackPageview']);
+                      var api_url_questions = api_url_format_questions.replace('%question_ids%', question_ids.join(';'));
 
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
+                      $.get(api_url_questions, function (data_questions) {
+                        if (!data_questions) {
+                          return;
+                        }
+                        if (!data_questions.items) {
+                          return;
+                        }
+                        if (!data_questions.items.length) {
+                          return;
+                        }
 
+                        $.each(data_questions.items, function (index, item) {
+                          if (!item) {
+                            return;
+                          }
+                          if (!item.question_id) {
+                            return;
+                          }
+                          var complex_question = complex_questions[item.question_id];
+                          if (!complex_question) {
+                            return;
+                          }
 
-</head>
+                          complex_question.title = item.title;
+                          complex_question.link = item.link;
+                        });
 
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">KheiAkiyama Blog</a></h1>
-  
-</hgroup>
+                        render_complex_questions(complex_questions);
+                      });
+                    });
+                  });
+                  function humanize_score(score) {
+                    if (!score) {
+                      return;
+                    }
 
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:kheiakiyama.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
+                    if (score / 1000 > 1) {
+                      return (score / 1000) + "k";
+                    } else {
+                      return score;
+                    }
+                  }
+                  function render_complex_questions(complex_questions) {
+                    if (!complex_questions) {
+                      return;
+                    }
 
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/hello-world/">Hello World</a></h1>
-    
-    
-      <p class="meta">
-        
+                    complex_questions = $.map(complex_questions, function (complex_question) {
+                      return [complex_question];
+                    });
+                    complex_questions.sort(function (a, b) {
+                      return b.score - a.score;
+                    });
 
+                    $stackoverflow_questions_and_answers = $('#stackoverflow_questions_and_answers');
 
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-01T13:57:30+09:00" pubdate data-updated="true">2013/12/01 13:57</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>お決まりの Hello World!</p>
-
-<p>参考にしたページ</p>
-
-<ul>
-<li><a href="http://morizyun.github.io/blog/octopress-gitpage-minimum-install-guide/">OctopressでGitHub無料ブログ構築。sourceをBitbucket管理。簡単ガイド！</a></li>
-<li><a href="http://tantant.jp/blog/Octopress/installing-octopress/">Markdownで書いてGitで管理するブログ「Octopress」の始め方</a></li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/hello-world/">Hello World</a>
-      </li>
-    
-  </ul>
-</section>
-
-
-
-
-
-  
-</aside>
-
+                    $.each(complex_questions, function (index, complex_question) {
+                      var link = complex_question.link + '#answer-' + complex_question.answer_id;
+                      var $li = $('<li />');
+                      $('<span />')
+                        .addClass('badge')
+                        .addClass(complex_question.is_accepted ? 'progress-bar-success' : '')
+                        .text(complex_question.score)
+                        .appendTo($li);
+                      $('<a />')
+                        .attr('href', link)
+                        .attr('target', '_blank')
+                        .text(complex_question.title)
+                        .appendTo($li);
+                      $li.appendTo($stackoverflow_questions_and_answers);
+                    });
+                  }
+                  </script>
+                </div>
+                {% endif %}
+                {% if site.author.programmingSkills %}
+                <div class="grid-block">
+                    <ul class="list-unstyled list-skills">
+                        {% for programmingSkill in site.author.programmingSkills %}
+                            <li>
+                                {% if programmingSkill.name %}
+                                    <span class="caption-skill">{{ programmingSkill.name }}</span>
+                                {% endif %}
+                                {% if programmingSkill.percentage %}
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: {{ programmingSkill.percentage }}">
+                                            <span>{{ programmingSkill.percentage }} </span>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            {% endif %}
+            {% if site.author.languages %}
+                <div class="deviter"></div>
+                <h3 class="title with-icon"><span class="fa fa-globe cat-title"></span> Language Skills</h3>
+                <div class="grid-block">
+                    <ul class="list-unstyled list-strip">
+                        {% for language in site.author.languages %}
+                            {% if language.name %}
+                                {% if language.proficiency %}
+                                    <li>
+                                        <i class="fa fa-check"></i> <span class="badge badge-green badge-right-float">{{ language.proficiency }}</span>{{ language.name }}
+                                    </li>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+            <div class="deviter"></div>
+            <h3 class="title with-icon"><span class="fa fa-location-arrow cat-title"></span> Location</h3>
+            <div class="grid-block">
+                <iframe src="https://www.google.com/maps/embed/v1/place?q={{ site.author.address }}&key=AIzaSyClEWLh20lxrQBFR7omuuVESviszPxONyk" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
+            </div>
+        </div>
     </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - KheiAkiyama -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-
-
-
-<script>
-(function(w,d){
-    var c,e=d.createDocumentFragment(),f=d.getElementsByTagName("script")[0],
-    a=function(a,b){if(!d.getElementById(b)){c=d.createElement("script");
-    c.src=a;c.id=b||null;c.async=true;e.appendChild(c);}};
-
-    w.___gcfg={lang:"ja"};
-    a("https://apis.google.com/js/plusone.js");
-
-
-    a("//platform.twitter.com/widgets.js");
-
-
-    a("//b.st-hatena.com/js/bookmark_button_wo_al.js");
-    f.parentNode.insertBefore(e,f);
-})(this,document);
-</script>
-
-</body>
-</html>
+</div>
