@@ -20,10 +20,21 @@ before_script:
 script: ./scripts/cibuild
 after_success:
   - ls -la ./azcopy
+  - ls -la ./_site
   - export PATH=$PATH:$HOME/dotnet
   - dotnet --version
   - dotnet ./azcopy/azcopy.dll --version
   - dotnet ./azcopy/azcopy.dll --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive
+  - dotnet ./azcopy/azcopy.dll --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --include "*.html" --set-content-type "text/html"
+  - dotnet ./azcopy/azcopy.dll --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --include "*.css" --set-content-type "text/css"
+  - dotnet ./azcopy/azcopy.dll --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --include "*.js" --set-content-type "application/javascript"
+  - dotnet ./azcopy/azcopy.dll --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --include "*.eot" --set-content-type "application/vnd.ms-fontobject"
+  - dotnet ./azcopy/azcopy.dll --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --include "*.woff" --set-content-type "application/font-woff"
+  - dotnet ./azcopy/azcopy.dll --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --include "*.woff2" --set-content-type "application/font-woff2"
+  - dotnet ./azcopy/azcopy.dll --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --include "*.otf" --set-content-type "application/font-woff"
+  - dotnet ./azcopy/azcopy.dll --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --include "*.svg" --set-content-type "image/svg+xml"
+  - dotnet ./azcopy/azcopy.dll --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --include "*.jpg" --set-content-type "image/jpeg"
+  - dotnet ./azcopy/azcopy.dll --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --include "*.png" --set-content-type "image/png"
 branches:
   only:
     - jekyll
