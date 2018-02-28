@@ -15,7 +15,7 @@ after_success:
   - sudo apt-get install -y build-essential libssl-dev libffi-dev python-dev python-pip
   - sudo pip install blobxfer
   - ls -la ./_site
-  - blobxfer synccopy --storage-account $STORAGE_ACCOUNT --sas $STORAGE_SAS --remote-path $STORAGE_CONTAINER_PATH --local-path ./_site
+  - blobxfer upload --overwrite --storage-account $STORAGE_ACCOUNT --sas $STORAGE_SAS --remote-path $STORAGE_CONTAINER_PATH --local-path ./_site
 branches:
   only:
     - jekyll
