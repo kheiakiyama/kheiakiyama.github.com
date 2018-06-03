@@ -40,6 +40,42 @@ author:
       started: 2005
       duration: (2005 - 2016)
       description: For the first 2 years, I implemented a function as a programmer with about 3-5 members. After that, I was in charge of specification review, design and team building as a team leader. In the last three years I have been involved in cloud service technology selection and web service development using Azure. In addition to Windows-based technologies, I also experienced development work using OSS technology, and selected and introduced Web services, built servers, and developed Web services for their own development department.
+  communityActivity:
+    - work:
+      title: de:code 2018
+      year: 2018
+      duration: May 2018
+      speaker: true
+      link: https://www.microsoft.com/ja-jp/events/decode/2018/sessions.aspx#CI21
+      description: In de:code2018, talk about case study of Microsoft Azure.
+    - work:
+      title: Nikkei Cloud First - Azure API Management
+      year: 2018
+      duration: Feb 2018
+      writing: true
+      link: http://tech.nikkeibp.co.jp/it/atclncf/service/00031/011700002/
+      description: Writing service evaluation about Azure API Management.
+    - work:
+      title: Engineer Lab Fukuoka '#1
+      year: 2018
+      duration: Jan 2018
+      speaker: true
+      link: https://www.slideshare.net/ssuser1b3e44/20180119ai
+      description: In Engineer Lab Fukuoka '#1, talk about cloud technology.
+    - work:
+      title: Nikkei Cloud First - Azure API Management
+      year: 2018
+      duration: Feb 2018
+      writing: true
+      link: http://tech.nikkeibp.co.jp/it/atclncf/service/00031/011700002/
+      description: Writing service evaluation about Azure API Management.
+    - work:
+      title: Nikkei Cloud First - Azure Data Factory
+      year: 2017
+      duration: Nov 2017
+      writing: true
+      link: http://tech.nikkeibp.co.jp/it/atclncf/service/00028/101600002/
+      description: Writing service evaluation about Azure Data Factory.
   educationHistory:
     - education1:
       organization: Shizuoka Industrial Technology College
