@@ -63,13 +63,6 @@ author:
       link: https://www.slideshare.net/ssuser1b3e44/20180119ai
       description: In Engineer Lab Fukuoka #1, talk about cloud technology.
     - work:
-      title: Nikkei Cloud First - Azure API Management
-      year: 2018
-      duration: Feb 2018
-      writing: true
-      link: http://tech.nikkeibp.co.jp/it/atclncf/service/00031/011700002/
-      description: Writing service evaluation about Azure API Management.
-    - work:
       title: Nikkei Cloud First - Azure Data Factory
       year: 2017
       duration: Nov 2017
