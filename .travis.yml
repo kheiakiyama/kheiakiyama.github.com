@@ -14,22 +14,22 @@ after_success:
   - sudo apt-get install apt-transport-https
   - sudo apt-get update
   - sudo apt-get install libunwind8
-  - sudo apt-get install aspnetcore-runtime-2.1
+  - sudo apt-get install dotnet-runtime-2.1
   - dotnet --version
-  - sudo apt-get install azcopy
+  - sudo apt-get install -f azcopy
   - ls -la ./_site
-  - dotnet azcopy --version
-  - dotnet azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet
-  - dotnet azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.html" --set-content-type "text/html"
-  - dotnet azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.css" --set-content-type "text/css"
-  - dotnet azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.js" --set-content-type "application/javascript"
-  - dotnet azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.eot" --set-content-type "application/vnd.ms-fontobject"
-  - dotnet azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.woff" --set-content-type "application/font-woff"
-  - dotnet azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.woff2" --set-content-type "application/font-woff2"
-  - dotnet azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.otf" --set-content-type "application/font-woff"
-  - dotnet azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.svg" --set-content-type "image/svg+xml"
-  - dotnet azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.jpg" --set-content-type "image/jpeg"
-  - dotnet azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.png" --set-content-type "image/png"
+  - azcopy --version
+  - azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet
+  - azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.html" --set-content-type "text/html"
+  - azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.css" --set-content-type "text/css"
+  - azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.js" --set-content-type "application/javascript"
+  - azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.eot" --set-content-type "application/vnd.ms-fontobject"
+  - azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.woff" --set-content-type "application/font-woff"
+  - azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.woff2" --set-content-type "application/font-woff2"
+  - azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.otf" --set-content-type "application/font-woff"
+  - azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.svg" --set-content-type "image/svg+xml"
+  - azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.jpg" --set-content-type "image/jpeg"
+  - azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.png" --set-content-type "image/png"
 branches:
   only:
     - master
