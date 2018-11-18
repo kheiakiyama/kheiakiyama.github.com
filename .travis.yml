@@ -11,6 +11,7 @@ after_success:
   - sudo apt-get update
   - sudo apt-get install apt-transport-https -y
   - sudo apt-get install libicu55 -y
+  - sudo apt-get install libunwind-dev -y
   - wget -O azcopy.tar.gz https://aka.ms/downloadazcopylinux64
   - tar -xf azcopy.tar.gz
   - sudo ./install.sh
