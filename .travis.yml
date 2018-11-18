@@ -20,17 +20,7 @@ after_success:
   - sudo ./install.sh
   - ls -la ./_site
   - azcopy --version
-  - azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet
-  - azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.html" --set-content-type "text/html"
-  - azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.css" --set-content-type "text/css"
-  - azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.js" --set-content-type "application/javascript"
-  - azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.eot" --set-content-type "application/vnd.ms-fontobject"
-  - azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.woff" --set-content-type "application/font-woff"
-  - azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.woff2" --set-content-type "application/font-woff2"
-  - azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.otf" --set-content-type "application/font-woff"
-  - azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.svg" --set-content-type "image/svg+xml"
-  - azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.jpg" --set-content-type "image/jpeg"
-  - azcopy --source ./_site --destination $BLOB_CONTAINER_URL --dest-key $STORAGE_KEY --recursive --quiet --include "*.png" --set-content-type "image/png"
+  - azcopy --source ./_site --destination "$BLOB_CONTAINER_URL" --dest-key $STORAGE_KEY --recursive --quiet
 branches:
   only:
     - master
