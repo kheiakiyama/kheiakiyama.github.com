@@ -20,7 +20,7 @@ after_success:
   - sudo ./install.sh
   - ls -la ./_site
   - azcopy --version
-  - azcopy --source ./_site --destination "$BLOB_CONTAINER_URL" --dest-key $STORAGE_KEY --recursive --quiet
+  - azcopy --source ./_site --destination "$BLOB_CONTAINER_URL" --dest-key $STORAGE_KEY --recursive --quiet --set-content-type
 branches:
   only:
     - master
