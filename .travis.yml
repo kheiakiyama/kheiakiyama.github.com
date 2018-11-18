@@ -10,6 +10,8 @@ script: ./scripts/cibuild
 after_success:
   - sudo apt-get update
   - sudo apt-get install apt-transport-https -y
+  - sudo add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security main"
+  - sudo apt-get update
   - sudo apt-get install libicu55 -y
   - sudo apt-get install libunwind-dev -y
   - wget -O azcopy.tar.gz https://aka.ms/downloadazcopylinux64
