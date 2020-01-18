@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: kheiakiyama/install-azcopy@v1
+    - uses: kheiakiyama/install-azcopy-action@v1
       with: 
         version: 'v10'
     - run: azcopy --version | grep 'azcopy'
