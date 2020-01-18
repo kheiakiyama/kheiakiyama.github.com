@@ -1,0 +1,17 @@
+name: "deploy"
+on: # rebuild any PRs and main branch changes
+  pull_request:
+  push:
+    branches:
+      - master
+      - 'releases/*'
+
+jobs:
+  deploy: # make sure build/ci work properly
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: kheiakiyama/install-azcopy@v1
+      with: 
+        version: 'v10'
+    - run: azcopy --version | grep 'azcopy'
