@@ -15,14 +15,15 @@ exclude: [vendor, terraform, Gemfile, Gemfile.lock, proxies.json, README.md, tra
 # Author settings
 author:
   name: kheiakiyama
-  title: IT Engineer
-  address: Taito-Ku, Tokyo
+  title: Azure Solution Architect
+  address: Sumida-Ku, Tokyo
   email: kheiakiyama#gmail.com
   link: https://cv.kheiakiyama.com
   github: kheiakiyama
   blog: kheiakiyama.hateblo.jp
   linkedin: kheiakiyama
   twitter: kheiakiyama
+  medium: kheiakiyama
   gavatar: /resumecard/assets/img/avatar.JPG
   stackoverflow:
 #  stackoverflow: 4582127
@@ -30,10 +31,10 @@ author:
     - work1:
       company: ISAO Ltd
       location: Tokyo, Japan
-      title: Azure Engineer
+      title: Azure Solution Architect
       started: 2017
       duration: (2017 - Present)
-      description: As pre-sales engineer and cloud engineer I am helping customers design and implement customer systems. In addition, I am in charge of infrastructure engineers for a service of our company.
+      description: As pre-sales engineer and cloud solution architect I am helping customers design and implement customer systems.
     - work2:
       company: Kensetsu System Ltd
       location: Shizuoka, Japan
@@ -47,7 +48,7 @@ author:
       year: 2018
       duration: Nov 2018
       speaker: true
-      link: https://www.microsoft.com/ja-jp/events/techsummit/2018/session.aspx#CI26
+      link: https://www.event-marketing.jp/events/mstechsummit/2018/download/freesess.aspx#CI26
       description: In Tech Summit 2018, talk about case study of Microsoft Azure.
     - work:
       title: Tech Summit 2018
@@ -61,7 +62,7 @@ author:
       year: 2018
       duration: May 2018
       speaker: true
-      link: https://www.microsoft.com/ja-jp/events/decode/2018/sessions.aspx#CI21
+      link: https://www.microsoft.com/ja-jp/events/decode/2018
       description: In de:code2018, talk about case study of Microsoft Azure.
     - work:
       title: Nikkei Cloud First - Azure API Management
@@ -99,11 +100,11 @@ author:
       proficiency: Native
     - language2:
       name: English
-      proficiency: Limit
+      proficiency: Limited TOEIC:720
   programmingSkills:
     - skill1:
       name: C#
-      percentage: 90%
+      percentage: 80%
     - skill2:
       name: ASP.NET MVC
       percentage: 50%
@@ -112,7 +113,7 @@ author:
       percentage: 60%
     - skill4:
       name: Azure
-      percentage: 80%
+      percentage: 95%
     - skill5:
       name: DevOps
-      percentage: 70%
+      percentage: 90%
