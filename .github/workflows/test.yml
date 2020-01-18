@@ -9,9 +9,18 @@ on: # rebuild any PRs and main branch changes
 jobs:
   deploy: # make sure build/ci work properly
     runs-on: ubuntu-latest
+    env:
+      NOKOGIRI_USE_SYSTEM_LIBRARIES: true
     steps:
     - uses: actions/checkout@v2
     - uses: kheiakiyama/install-azcopy-action@v1
       with: 
         version: 'v10'
     - run: azcopy --version | grep 'azcopy'
+    - uses: eregon/use-ruby-action@v1
+      with:
+        ruby-version: 2.5.7
+    - name: jekyll build
+      run: |
+        ruby --version
+        ./scripts/cibuild
