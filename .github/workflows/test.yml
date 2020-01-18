@@ -31,5 +31,5 @@ jobs:
         bundle install --jobs 4
         ./scripts/cibuild
       env:
-        NOKOGIRI_USE_SYSTEM_LIBRARIES: true
+        NOKOGIRI_USE_SYSTEM_LIBRARIES: false
     - run: azcopy --version | grep 'azcopy'
