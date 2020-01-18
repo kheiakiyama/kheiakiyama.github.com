@@ -25,6 +25,6 @@ jobs:
         ruby --version
         pwd
         ls -l
-        apt-get install libxml2
+        sudo apt-get install libxml2
         bundle install
         ./scripts/cibuild
