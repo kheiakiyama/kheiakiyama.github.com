@@ -9,8 +9,6 @@ on: # rebuild any PRs and main branch changes
 jobs:
   deploy: # make sure build/ci work properly
     runs-on: ubuntu-latest
-    env:
-      NOKOGIRI_USE_SYSTEM_LIBRARIES: true
     steps:
     - uses: actions/checkout@v2
     - uses: kheiakiyama/install-azcopy-action@v1
@@ -20,6 +18,8 @@ jobs:
     - uses: actions/setup-ruby@v1
       with:
         ruby-version: 2.5
+    - name: Set up bundler
+      run: gem install bundler
     - name: jekyll build
       run: |
         ruby --version
@@ -27,6 +27,8 @@ jobs:
         ls -l
         sudo apt-get update
         sudo apt-get install libxml2
-        bundle install
+        bundle install --jobs 4 --retry 3
         ./scripts/cibuild
+      env:
+        NOKOGIRI_USE_SYSTEM_LIBRARIES: true
     - run: azcopy --version | grep 'azcopy'
