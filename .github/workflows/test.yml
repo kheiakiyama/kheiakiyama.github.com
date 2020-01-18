@@ -23,4 +23,7 @@ jobs:
     - name: jekyll build
       run: |
         ruby --version
+        ls -l
+        bundle install
+        pwd
         ./scripts/cibuild
