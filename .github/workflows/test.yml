@@ -17,9 +17,9 @@ jobs:
       with: 
         version: 'v10'
     - run: azcopy --version | grep 'azcopy'
-    - uses: eregon/use-ruby-action@v1
+    - uses: actions/setup-ruby@v1
       with:
-        ruby-version: 2.5.7
+        ruby-version: 2.5
     - name: jekyll build
       run: |
         ruby --version
@@ -27,7 +27,6 @@ jobs:
         ls -l
         sudo apt-get update
         sudo apt-get install libxml2
-        gem install nokogiri -v '1.10.7' --source 'https://rubygems.org/'
         bundle install
         ./scripts/cibuild
     - run: azcopy --version | grep 'azcopy'
