@@ -27,6 +27,7 @@ jobs:
         ls -l
         sudo apt-get update
         sudo apt-get install libxml2
+        gem install nokogiri -v '1.10.7' --source 'https://rubygems.org/'
         bundle install
         ./scripts/cibuild
     - run: azcopy --version | grep 'azcopy'
