@@ -14,7 +14,10 @@ jobs:
     - uses: kheiakiyama/install-azcopy-action@v1
       with: 
         version: 'v10'
-    - run: azcopy --version | grep 'azcopy'
+    - run: |
+        which azcopy
+        pwd
+        azcopy --version | grep 'azcopy'
     - uses: actions/setup-ruby@v1
       with:
         ruby-version: 2.5
@@ -27,9 +30,11 @@ jobs:
         ls -l
         sudo apt-get update
         sudo apt-get install libxml2 libxslt1-dev
-        gem install nokogiri -v '1.10.7' --source 'https://rubygems.org/'
         bundle install --jobs 4
         ./scripts/cibuild
       env:
         NOKOGIRI_USE_SYSTEM_LIBRARIES: false
-    - run: azcopy --version | grep 'azcopy'
+    - run: |
+        which azcopy
+        pwd
+        azcopy --version | grep 'azcopy'
