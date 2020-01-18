@@ -27,7 +27,8 @@ jobs:
         ls -l
         sudo apt-get update
         sudo apt-get install libxml2
-        bundle install --jobs 4 --retry 3
+        gem install nokogiri -v '1.10.7' --source 'https://rubygems.org/'`
+        bundle install --jobs 4
         ./scripts/cibuild
       env:
         NOKOGIRI_USE_SYSTEM_LIBRARIES: true
