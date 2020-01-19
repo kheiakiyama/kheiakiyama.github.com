@@ -1,6 +1,7 @@
 # kheiakiyama.github.com
 -------
-[![Build Status](https://travis-ci.org/kheiakiyama/kheiakiyama.github.com.svg?branch=master)](https://travis-ci.org/kheiakiyama/kheiakiyama.github.com)
+<a href="https://github.com/kheiakiyama/kheiakiyama.github.com/actions"><img alt="kheiakiyama.github.com status" src="https://github.com/kheiakiyama/kheiakiyama.github.com/workflows/release/badge.svg"></a>
+
 
 ## debug
 
