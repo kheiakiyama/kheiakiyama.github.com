@@ -26,11 +26,11 @@ jobs:
         ./scripts/cibuild
       env:
         NOKOGIRI_USE_SYSTEM_LIBRARIES: false
-      - name: Upload jekyll output
-        uses: actions/upload-artifact@v1
-        with:
-          name: jekyll
-          path: ./_site
+    - name: Upload jekyll output
+      uses: actions/upload-artifact@v1
+      with:
+        name: jekyll
+        path: ./_site
  deploy:
     runs-on: ubuntu-latest
     needs: build
