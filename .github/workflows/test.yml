@@ -31,13 +31,19 @@ jobs:
         which azcopy
         pwd
         azcopy --version | grep 'azcopy'
-    - name: jekyll build
+    - name: nokogiri dependencies
       run: |
         ruby --version
         pwd
         ls -l
         sudo apt-get update
         sudo apt-get install libxml2 libxslt1-dev
+    - run: |
+        which azcopy
+        pwd
+        azcopy --version | grep 'azcopy'
+    - name: jekyll build
+      run: |
         bundle install --jobs 4
         ./scripts/cibuild
       env:
