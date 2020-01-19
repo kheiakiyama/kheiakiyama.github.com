@@ -36,12 +36,10 @@ jobs:
         ruby --version
         pwd
         ls -l
-        echo $LANG
-        timedatectl
         sudo apt-get update
         sudo apt-get install libxml2 libxslt1-dev
-        echo $LANG
-        timedatectl
+        sudo update-locale LANG="en_US.UTF-8"
+        sudo dpkg-reconfigure locales
     - run: |
         which azcopy
         pwd
