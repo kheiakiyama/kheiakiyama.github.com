@@ -1,10 +1,8 @@
 name: "release"
-on: # rebuild any PRs and main branch changes
-  pull_request:
+on: # rebuild master branch changes
   push:
     branches:
       - master
-      - 'releases/*'
 
 jobs:
   build:
