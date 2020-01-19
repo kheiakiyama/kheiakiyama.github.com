@@ -36,8 +36,12 @@ jobs:
         ruby --version
         pwd
         ls -l
+        echo $LANG
+        timedatectl
         sudo apt-get update
         sudo apt-get install libxml2 libxslt1-dev
+        echo $LANG
+        timedatectl
     - run: |
         which azcopy
         pwd
