@@ -21,24 +21,18 @@ jobs:
     - uses: actions/setup-ruby@v1
       with:
         ruby-version: 2.5
-    - run: |
-        which azcopy
-        pwd
-        azcopy --version | grep 'azcopy'
     - name: Set up bundler
       run: gem install bundler
-    - run: |
-        which azcopy
-        pwd
-        azcopy --version | grep 'azcopy'
     - name: nokogiri dependencies
       run: |
         ruby --version
         pwd
         ls -l
+        uconv -V
         sudo apt-get update
         sudo apt-get install libxml2 libxslt1-dev
-        export LANG=en_US.UTF-8
+        uconv -V
+        sudo export LANG=en_US.UTF-8
     - run: |
         which azcopy
         pwd
