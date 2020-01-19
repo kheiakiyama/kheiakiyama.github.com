@@ -49,7 +49,7 @@ jobs:
         azcopy --version | grep 'azcopy'
         azcopy --source ./_site --destination "$BLOB_CONTAINER_URL" --dest-key ${{ secrets.STORAGE_KEY }} --recursive --quiet --set-content-type
       env:
-        BLOB_CONTAINER_URL: 'https://kheiakiyama.blob.core.windows.net/\$web'
+        BLOB_CONTAINER_URL: 'https://kheiakiyama.blob.core.windows.net/$web'
     - uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
