@@ -21,9 +21,17 @@ jobs:
     - uses: actions/setup-ruby@v1
       with:
         ruby-version: 2.5
+        - run: |
+        which azcopy
+        pwd
+        azcopy --version | grep 'azcopy'
     - name: Set up bundler
       run: gem install bundler
-    - name: jekyll build
+      - run: |
+      which azcopy
+      pwd
+      azcopy --version | grep 'azcopy'
+  - name: jekyll build
       run: |
         ruby --version
         pwd
