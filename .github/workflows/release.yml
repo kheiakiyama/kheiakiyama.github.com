@@ -55,4 +55,4 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-          az cdn endpoint purge -g kheiakiyama.com --profile-name kheiakiyama-cdn -n cv-kheiakiyama --content-paths '*'
+          az cdn endpoint purge -g kheiakiyama.com --profile-name kheiakiyama-cdn -n cv-kheiakiyama --content-paths '/*'
