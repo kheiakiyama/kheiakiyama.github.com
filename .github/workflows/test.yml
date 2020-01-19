@@ -28,11 +28,9 @@ jobs:
         ruby --version
         pwd
         ls -l
-        uconv -V
         sudo apt-get update
         sudo apt-get install libxml2 libxslt1-dev
-        uconv -V
-        sudo export LANG=en_US.UTF-8
+        sudo update-locale LANG="en_US.UTF-8 UTF-8"
     - run: |
         which azcopy
         pwd
