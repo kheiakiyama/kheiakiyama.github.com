@@ -38,14 +38,15 @@ jobs:
     - uses: kheiakiyama/install-azcopy-action@v1
       with: 
         version: 'v10'
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
     - name: Download jekyll output
       uses: actions/download-artifact@v1
       with:
         name: jekyll
     - name: azcopy upload jekyll content
       run: |
-        azcopy --version | grep 'azcopy'
-        azcopy --source ./jekyll --destination "$BLOB_CONTAINER_URL" --dest-key ${{ secrets.STORAGE_KEY }} --recursive --quiet --set-content-type
+        azcopy_v10 --version | grep 'azcopy'
+        azcopy_v10 sync ./jekyll "$BLOB_CONTAINER_URL" --recursive=true
       env:
         BLOB_CONTAINER_URL: 'https://kheiakiyama.blob.core.windows.net/$web'
     - uses: azure/login@v1

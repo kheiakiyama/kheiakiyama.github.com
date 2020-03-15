@@ -10,7 +10,7 @@ google_analytics: UA-46111689-1
 # Build settings
 markdown: kramdown
 
-exclude: [vendor, terraform, Gemfile, Gemfile.lock, proxies.json, README.md, travis.sh]
+exclude: [vendor, terraform, Gemfile, Gemfile.lock, proxies.json, README.md, travis.sh, docker-compose.yml, Dockerfile]
 
 # Author settings
 author:
