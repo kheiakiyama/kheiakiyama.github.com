@@ -46,7 +46,7 @@ jobs:
     - name: azcopy upload jekyll content
       run: |
         azcopy_v10 --version | grep 'azcopy'
-        azcopy_v10 sync ./jekyll "$BLOB_CONTAINER_URL" --recursive=true
+        azcopy_v10 sync ./jekyll "$BLOB_CONTAINER_URL" --recursive=true --delete-destination=true
       env:
         BLOB_CONTAINER_URL: 'https://kheiakiyama.blob.core.windows.net/$web'
     - uses: azure/login@v1
