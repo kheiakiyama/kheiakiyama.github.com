@@ -44,6 +44,13 @@ author:
       description: For the first 2 years, I implemented functions as a programmer with about 3-5 members. After that, I was in charge of specification review, design and team building as a team leader. In the last three years I have been involved in cloud service technology selection and web service development using Azure. In addition to Windows-based technologies, I also experienced development work using OSS technology, and selected and introduced Web services, built servers, and developed Web services for their own development department.
   communityActivity:
     - work:
+      title: install-azcopy(GitHub Action)
+      year: 2020
+      duration: Mar 2020
+      writing: true
+      link: https://github.com/marketplace/actions/install-azcopy
+      description: Set up your GitHub Actions workflow azcopy
+    - work:
       title: Tech Summit 2018
       year: 2018
       duration: Nov 2018
