@@ -28,14 +28,14 @@ author:
   stackoverflow:
 #  stackoverflow: 4582127
   workHistory:
-    - work1:
-      company: ISAO Ltd
+    - work:
+      company: Colorkrew Inc. (ISAO Ltd)
       location: Tokyo, Japan
-      title: Azure Solution Architect
+      title: Azure Cloud Solution Architect
       started: 2017
       duration: (2017 - Present)
       description: As pre-sales engineer and cloud solution architect I am helping customers design and implement customer systems.
-    - work2:
+    - work:
       company: Kensetsu System Ltd
       location: Shizuoka, Japan
       title: Programmer
