@@ -16,7 +16,7 @@ exclude: [vendor, terraform, Gemfile, Gemfile.lock, proxies.json, README.md, tra
 author:
   name: kheiakiyama
   title: Azure Solution Architect
-  address: Sumida-Ku, Tokyo
+  address: Taito-Ku, Tokyo
   email: kheiakiyama#gmail.com
   link: https://cv.kheiakiyama.com
   github: kheiakiyama
