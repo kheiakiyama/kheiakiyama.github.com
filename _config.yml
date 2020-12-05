@@ -55,7 +55,8 @@ author:
       year: 2018
       duration: Nov 2018
       speaker: true
-      link: https://www.event-marketing.jp/events/mstechsummit/2018/download/freesess.aspx#CI26
+      #link: https://www.event-marketing.jp/events/mstechsummit/2018/download/freesess.aspx#CI26
+      link: https://www.microsoft.com/ja-jp/events/techsummit/2018/overview.aspx
       description: In Tech Summit 2018, talk about case study of Microsoft Azure.
     - work:
       title: Tech Summit 2018
