@@ -6,7 +6,7 @@ RUN cd $APP_DIR && bundle install
 
 ADD . $APP_DIR
 
-RUN cd $APP_DIR && $APP_DIR/scripts/cibuild
+RUN cd $APP_DIR && bundle exec jekyll build && bundle exec htmlproofer ./_site --only-4xx --allow-hash-href
 
 FROM nginx:alpine
 
