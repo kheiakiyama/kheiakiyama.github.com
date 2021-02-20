@@ -93,6 +93,21 @@ author:
       writing: true
       link: http://tech.nikkeibp.co.jp/it/atclncf/service/00028/101600002/
       description: Writing service evaluation about Azure Data Factory.
+  certificates:
+    - certificate1:
+      title: Azure DevOps Engineer
+      year: 2020
+      organization: Microsoft
+      subtitle: "DevOps Engineer Expert"
+      contentImage: /assets/img/CERT-Expert-DevOps-Engineer-600x600.png
+      duration: October 01, 2020 - October 01, 2022
+    - certificate2:
+      title: Azure Administrator Associate
+      year: 2019
+      organization: Microsoft
+      subtitle: "Azure Administrator"
+      contentImage: /assets/img/azure-administrator-associate.png      
+      duration: April 19, 2019 - October 19, 2021
   educationHistory:
     - education1:
       organization: Shizuoka Industrial Technology College

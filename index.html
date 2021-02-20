@@ -86,6 +86,52 @@ layout: default
                     {% endfor %}
                 </ul>
             {% endif %}
+            {% if site.author.certificates %}
+                <h3 class="title with-icon"><span class="fa fa-book cat-title"></span>Certificates</h3>
+                <ul class="timeline">
+                    {% for certificate in site.author.certificates %}
+                        <li class="timeline-inverted">
+                            {% if certificate.year %}
+                                <div class="timeline-badge info">{{ certificate.year }}</div>
+                            {% endif %}
+                            <div class="timeline-panel grid-block">
+                                <div class="timeline-heading">
+                                    {% if certificate.title %}
+                                        <h4 class="timeline-title">{{ certificate.title }}</h4>
+                                    {% endif %}
+                                    <p>
+                                        <small class="text-muted">
+                                            {% if certificate.organization %}
+                                                {{ certificate.organization }}
+                                            {% endif %}
+                                            {% if certificate.subtitle %}
+                                                , {{ certificate.subtitle }}
+                                            {% endif %}
+                                        </small>
+                                    </p>
+                                    <p>
+                                        {% if certificate.contentImage and certificate.subtitle %}
+                                            <img src="{{ certificate.contentImage }}" width="200px" height="200px" title="{{ certificate.subtitle }}" alt="{{ certificate.subtitle }}">
+                                        {% endif %}
+                                    </p>
+                                    <p>
+                                        <small class="text-muted">
+                                            {% if certificate.duration %}
+                                                <i class="fa fa-calendar"></i> {{ certificate.duration }} |
+                                            {% endif %}
+                                        </small>
+                                    </p>
+                                </div>
+                                <div class="timeline-body">
+                                    {% if education.description %}
+                                        <p>{{ education.description }}</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
             {% if site.author.educationHistory %}
                 <h3 class="title with-icon"><span class="fa fa-book cat-title"></span>Education History</h3>
                 <ul class="timeline">
