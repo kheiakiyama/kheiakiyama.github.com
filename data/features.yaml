@@ -1,0 +1,46 @@
+about:
+  name: kheiakiyama
+  tagline: Azure Solution Architect
+  email: kheiakiyama#gmail.com
+
+
+skills:
+  - groupName: Cloud Infrastructure
+    list:
+      - Azure
+
+  - groupName: DevOps
+    list:
+      - Azure DevOps
+      - GitHub Action
+      - Terraform
+
+  - groupName: Programming & Systems
+    list:
+      - C# 
+      - Docker
+      - Linux/Windows
+
+interests:
+  - Cloud Architecture
+  - DevOps
+  - Presentation
+
+languages:
+  - name: Japanese
+    level: Native
+  - name: English
+    level: Limited
+    certificates:
+      - "TOEIC: 735 - 2020"
+
+certificates:
+  - title: "Azure DevOps Engineer"
+    subtitle: Microsoft, DevOps Engineer Expert
+    date: "October 01, 2020 - October 01, 2022"
+    link: https://cv.kheiakiyama.com/# #todo
+
+  - title: "Azure Administrator Associate"
+    subtitle: Microsoft, Azure Administrator
+    date: "April 19, 2019 - October 19, 2021"
+    link: https://cv.kheiakiyama.com/# #todo

@@ -1,0 +1,31 @@
+
+activities:
+    - title: "install-azcopy(GitHub Action) | #code"
+      date: Mar 2020 ~
+      link: https://github.com/marketplace/actions/install-azcopy
+      details: Set up your GitHub Actions workflow azcopy
+    - title: "Tech Summit 2018 | #speaker"
+      date: Nov 2018
+      #link: https://www.event-marketing.jp/events/mstechsummit/2018/download/freesess.aspx#CI26
+      link: https://www.microsoft.com/ja-jp/events/techsummit/2018/overview.aspx
+      details: In Tech Summit 2018, talk about case study of Microsoft Azure.
+    - title: "Tech Summit 2018 | #speaker"
+      date: Nov 2018
+      link: https://blog.isao.co.jp/techsummit-2018-datafactory-handson/
+      details: In Tech Summit 2018, handson about Azure Data Factory.
+    - title: "de:code 2018 | #speaker"
+      date: May 2018
+      link: https://www.microsoft.com/ja-jp/events/decode/2018
+      details: In de:code2018, talk about case study of Microsoft Azure.
+    - title: "Nikkei Cloud First - Azure API Management | #publication"
+      date: Feb 2018
+      link: http://tech.nikkeibp.co.jp/it/atclncf/service/00031/011700002/
+      details: Writing service evaluation about Azure API Management.
+    - title: "Engineer Lab Fukuoka #1 | #speaker"
+      date: Jan 2018
+      link: https://www.slideshare.net/ssuser1b3e44/20180119ai
+      details: In Engineer Lab Fukuoka #1, talk about cloud technology.
+    - title: "Nikkei Cloud First - Azure Data Factory | #publication"
+      date: Nov 2017
+      link: http://tech.nikkeibp.co.jp/it/atclncf/service/00028/101600002/
+      details: Writing service evaluation about Azure Data Factory.
