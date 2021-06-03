@@ -1,4 +1,4 @@
-name: "release"
+name: "hugo-release"
 on: # rebuild master branch changes
   push:
     branches:
