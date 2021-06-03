@@ -17,8 +17,8 @@
 		{{- end }}
 		{{ if $.Header.links -}}
 			<span class="contact-links">
-				{{- $last := sub (len .links) 1 -}}
-				{{- range $i, $e := .links -}}
+				{{- $last := sub (len $.Header.links) 1 -}}
+				{{- range $i, $e := $.Header.links -}}
 				<a href="{{ $e.url }}" class="no-external-icon">
 					{{- if and $e.icon $.useFontAwesome }}<i class="{{ $e.icon }}"></i> {{ end -}}
 					{{- $e.title -}}
