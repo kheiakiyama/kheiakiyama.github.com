@@ -1,7 +1,13 @@
-_site
-.sass-cache
-.idea
-resumecard.iml
-/*.iml
-Gemfile.lock
-.python-version
+# Hugo default output directory
+/public
+/resources/_gen
+
+## OS Files
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# OSX
+.DS_Store

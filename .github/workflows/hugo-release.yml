@@ -1,0 +1,50 @@
+name: "hugo-release"
+on: # rebuild master branch changes
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.83.1'
+    - name: Build
+      run: hugo
+    - name: Upload hugo output
+      uses: actions/upload-artifact@v1
+      with:
+        name: hugo
+        path: './public'
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - uses: actions/checkout@v2
+    - uses: kheiakiyama/install-azcopy-action@v1.0.3
+      with: 
+        version: 'v10'
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - name: Download hugo output
+      uses: actions/download-artifact@v1
+      with:
+        name: hugo
+    - name: azcopy upload hugo content
+      run: |
+        azcopy_v10 --version | grep 'azcopy'
+        azcopy_v10 sync ./hugo "$BLOB_CONTAINER_URL" --recursive=true --delete-destination=true
+      env:
+        BLOB_CONTAINER_URL: 'https://kheiakiyama.blob.core.windows.net/$web'
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - name: Azure CLI script
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+          az cdn endpoint purge -g kheiakiyama.com --profile-name kheiakiyama-cdn -n cv-kheiakiyama --content-paths '/*'

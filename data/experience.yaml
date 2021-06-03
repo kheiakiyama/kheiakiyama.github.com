@@ -1,0 +1,18 @@
+- company: Colorkrew Inc. (ISAO Ltd)
+  roles:
+    - role: Azure Cloud Solution Architect
+      details: "As pre-sales engineer and cloud solution architect I am helping customers design and implement customer systems."
+      date: "01.2017 - Present"
+
+- company: Kensetsu System Ltd
+  roles: 
+    - role: Tech Lead
+      details: "I have been involved in cloud service technology selection and web service development using Microsoft Azure. 
+              In addition to Windows-based technologies, I also experienced development work using OSS technology, and selected and introduced Web services, built servers, and developed Web services for their own development department"
+      date: "2013 - 12.2016"
+    - role: Senior Software Developer
+      details: "In charge of specification review, design and team building as a team leader using Delphi/C#"
+      date: "2008 - 2012"
+    - role: Junior Software Developer
+      details: "I implemented functions as a programmer with about 3-5 members using Delphi"
+      date: "04.2005 - 2007"

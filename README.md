@@ -3,12 +3,15 @@
 <a href="https://github.com/kheiakiyama/kheiakiyama.github.com/actions"><img alt="kheiakiyama.github.com status" src="https://github.com/kheiakiyama/kheiakiyama.github.com/workflows/release/badge.svg"></a>
 
 
-## debug
+## develop
+- Check Hugo official page
+https://gohugo.io/getting-started/quick-start/
 
 ```
-docker-compose build
-docker-compose up
-# open http://localhost:8001
+# build and launch local server
+hugo server -D
+# build
+hugo -D
 ```
 
 ## deploy setting
@@ -18,7 +21,3 @@ az ad sp create-for-rbac --years 100 --sdk-auth true --scopes {RESOURCE_GROUP_ID
 # put result to github secret as `AZURE_CREDENTIALS`
 az role assignment create --role "Storage Blob Data Owner" --assignee-object-id {OBJECT_ID}
 ```
-
-## resumecard
--------
-This design is powered by [resumecard](https://ddbullfrog.github.io/resumecard)
