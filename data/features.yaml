@@ -2,7 +2,10 @@ about:
   name: kheiakiyama
   tagline: Azure Solution Architect
   email: kheiakiyama#gmail.com
-
+  details: |
+    I am good at PaaS / DevOps on Microsoft Azure.
+    
+    C# > PHP > Node > (Tool Level) > Ruby, Python.
 
 skills:
   - groupName: Cloud Infrastructure
