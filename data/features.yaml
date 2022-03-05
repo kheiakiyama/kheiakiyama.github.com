@@ -44,16 +44,16 @@ certificates:
     link: https://www.credly.com/badges/4cbdb647-f706-4d90-81e6-c85257e00229
 
   - title: "Azure Administrator Associate"
-    subtitle: Microsoft, Azure Administrator Associate
+    subtitle: Microsoft, Azure Administrator
     date: "19 April 2019 - 19 October 2022"
     link: https://www.credly.com/badges/c287dd23-c3ae-46e1-b2c6-104c958c72c6 #todo
 
   - title: "Azure Developer Associate"
-    subtitle: Microsoft, Azure Developer Associate
+    subtitle: Microsoft, Azure Developer
     date: "18 December 2021 - 18 December 2022"
     link: https://www.credly.com/badges/43ec0338-5f8e-4b24-9e27-6df16df95825
 
   - title: "Azure Data Engineer Associate"
-    subtitle: Microsoft, Azure Data Engineer Associate
+    subtitle: Microsoft, Azure Data Engineer
     date: "05 March 2022 - 05 March 2023"
     link: https://www.credly.com/badges/d23ab77b-c3e5-4e92-ac2a-43a2cb27c7b2
