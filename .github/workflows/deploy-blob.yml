@@ -17,7 +17,7 @@ jobs:
     - name: Build
       run: hugo
     - name: Upload hugo output
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
         name: hugo
         path: './public'
