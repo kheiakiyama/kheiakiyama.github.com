@@ -1,8 +1,29 @@
-- company: Colorkrew Inc. (ISAO Ltd)
+- company: Colorkrew Inc. (former ISAO Ltd)
   roles:
-    - role: Azure Cloud Solution Architect
-      details: "As pre-sales engineer and cloud solution architect I am helping customers design and implement customer systems."
+    - role: Azure Cloud Solution Architect | DevOps Engineer
+      details: "I am helping customers to design and implement infrastructure of customer systems."
       date: "01.2017 - Present"
+      works:
+        - customer: Enterprise Manufacturing
+          architecture: Data Platform
+          technologies: Azure Data Factory, Azure Synapse Analytics, Logic App, Power BI, Azure DevOps Services
+        - customer: Recruitment Service
+          architecture: Big Data Analytics Platform
+          technologies: Azure Databricks, Azure Data Factory, Azure DataLake Storage Gen2, Azure Firewall, Azure Virtual Desktop, Azure DevOps Services
+          link: https://customers.microsoft.com/ja-jp/story/1706082369187615521-persol-azure-professional-services-ja-japan
+        - customer: In-house security service
+          architecture: Web application
+          technologies: Azure Front Door, Application Gateway, API Management, App Service, SQL Database, Azure Redis Cache, Azure DevOps Services
+    - role: SaaS Infra Lead
+      details: "I have implemented infrastructure of in-house service and deployment flow using Microsoft Azure, GitHub Action."
+      date: "01.2017 - Present"
+      works:
+        - customer: Ourselves
+          architecture: Web application
+          technologies: Azure Front Door, Azure Kubernetes, Azure Database for PostgreSQL, Azure Redis Cache, GitHub Action
+        - customer: Ourselves
+          architecture: Cloud Cost Analysis
+          technologies: Azure Data Factory, Azure Storage, Power BI
 
 - company: Kensetsu System Ltd
   roles: 
@@ -11,7 +32,7 @@
               In addition to Windows-based technologies, I also experienced development work using OSS technology, and selected and introduced Web services, built servers, and developed Web services for their own development department"
       date: "2013 - 12.2016"
     - role: Senior Software Developer
-      details: "In charge of specification review, design and team building as a team leader using Delphi/C#"
+      details: "In charge of specification review, design and team building as a team leader using C#/Delphi"
       date: "2008 - 2012"
     - role: Junior Software Developer
       details: "I implemented functions as a programmer with about 3-5 members using Delphi"

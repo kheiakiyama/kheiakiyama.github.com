@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
       with:
@@ -25,13 +25,13 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: kheiakiyama/install-azcopy-action@v1.0.4
       with: 
         version: 'v10'
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     - name: Download hugo output
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v4
       with:
         name: hugo
     - name: azcopy upload hugo content
@@ -43,8 +43,3 @@ jobs:
     - uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
-    - name: Azure CLI script
-      uses: azure/CLI@v1
-      with:
-        inlineScript: |
-          az cdn endpoint purge -g kheiakiyama.com --profile-name kheiakiyama-cdn -n cv-kheiakiyama --content-paths '/*'
