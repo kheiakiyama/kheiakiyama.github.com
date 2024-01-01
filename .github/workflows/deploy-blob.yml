@@ -35,6 +35,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: hugo
+        path: ./hugo
     - name: azcopy upload hugo content
       run: |
         azcopy_v10 --version | grep 'azcopy'
