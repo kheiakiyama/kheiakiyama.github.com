@@ -1,11 +1,10 @@
 about:
   name: kheiakiyama
-  tagline: Azure Solution Architect
+  tagline: Azure Cloud Solution Architect | DevOps Engineer
   email: kheiakiyama#gmail.com
   details: |
-    I am good at PaaS / DevOps on Microsoft Azure.
-    
-    C# > PHP > Node > (Tool Level) > Ruby, Python.
+    Hi, I am Kohei, Japanese. I am interested in using my tech stacks to increase team productivity.
+    I like to make new experience on business and my life.
 
 skills:
   - groupName: Cloud Infrastructure
@@ -36,6 +35,7 @@ languages:
     level: Limited
     certificates:
       - "TOEIC: 735 - 2020"
+      - "GCAS: B2 - 2023"
 
 certificates:
   - title: "Azure DevOps Engineer"

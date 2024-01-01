@@ -1,6 +1,6 @@
 # kheiakiyama.github.com
 -------
-<a href="https://github.com/kheiakiyama/kheiakiyama.github.com/actions"><img alt="kheiakiyama.github.com status" src="https://github.com/kheiakiyama/kheiakiyama.github.com/workflows/release/badge.svg"></a>
+<a href="https://github.com/kheiakiyama/kheiakiyama.github.com/actions"><img alt="kheiakiyama.github.com status" src="https://github.com/kheiakiyama/kheiakiyama.github.com/workflows/deploy/badge.svg"></a>
 
 
 ## develop
@@ -14,7 +14,7 @@ hugo server -D
 hugo -D
 ```
 
-## deploy setting
+## deploy setting for blob
 
 ```
 az ad sp create-for-rbac --years 100 --sdk-auth true --scopes {RESOURCE_GROUP_ID}

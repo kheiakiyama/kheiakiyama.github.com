@@ -54,7 +54,7 @@ params:
     contact: true
     tagline: true
     links:
-      - title: Twitter
+      - title: X
         url: https://twitter.com/kheiakiyama
         icon: fab fa-twitter
       - title: Linkedin
@@ -86,13 +86,10 @@ params:
     - features:
         - feature: activities
           collection: activities
-          title: Community Activity
+          title: Community Activities
           widget: details-list
         - feature: certificates
           title: Certifications
-        - feature: interests
-          widget: word-list
-          style: list
         
   footer:
     show: false
