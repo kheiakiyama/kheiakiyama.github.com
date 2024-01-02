@@ -3,7 +3,6 @@ on: # rebuild master branch changes
   push:
     branches:
       - master
-      - update-2024
 
 jobs:
   build:
