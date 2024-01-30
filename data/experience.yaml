@@ -1,7 +1,7 @@
 - company: Colorkrew Inc. (former ISAO Ltd)
   roles:
     - role: Azure Cloud Solution Architect | DevOps Engineer
-      details: "I am helping customers to design and implement infrastructure of customer systems."
+      details: "I am helping customers to design and implement infrastructure of customer systems. Most projects are in teams of 1 ~ 10 people, with positions communicating directly with customers"
       date: "01.2017 - Present"
       works:
         - customer: Enterprise Manufacturing
@@ -15,7 +15,7 @@
           architecture: Web application
           technologies: Azure Front Door, Application Gateway, API Management, App Service, SQL Database, Azure Redis Cache, Azure DevOps Services
     - role: SaaS Infra Lead
-      details: "I have implemented infrastructure of in-house service and deployment flow using Microsoft Azure, GitHub Action."
+      details: "I have implemented infrastructure of in-house service and deployment flow using Microsoft Azure, GitHub Action. And have worked as infra lead with 2 members for 20+ developers. Responsible is Cloud architect and DevOps"
       date: "01.2017 - Present"
       works:
         - customer: Ourselves
