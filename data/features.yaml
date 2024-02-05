@@ -38,6 +38,11 @@ languages:
       - "GCAS: B2 - 2023"
 
 certificates:
+  - title: "GitHub Actions"
+    subtitle: GitHub, Certification Program
+    date: "February 02, 2024 - February 02, 2027"
+    link: https://www.credly.com/badges/08b35125-92fa-4869-b0ca-5b8c4f70b588
+
   - title: "Azure DevOps Engineer"
     subtitle: Microsoft, DevOps Engineer Expert
     date: "1 October 2020 - 1 October 2024"
