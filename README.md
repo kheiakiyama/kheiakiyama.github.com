@@ -1,6 +1,6 @@
 # kheiakiyama.github.com
 -------
-<a href="https://github.com/kheiakiyama/kheiakiyama.github.com/actions"><img alt="kheiakiyama.github.com status" src="https://github.com/kheiakiyama/kheiakiyama.github.com/workflows/deploy/badge.svg"></a>
+<a href="https://github.com/kheiakiyama/kheiakiyama.github.com/actions"><img alt="kheiakiyama.github.com status" src="https://github.com/kheiakiyama/kheiakiyama.github.com/actions/workflows/deploy.yml/badge.svg"></a>
 
 
 ## develop
