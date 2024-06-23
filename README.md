@@ -3,6 +3,9 @@
 <a href="https://github.com/kheiakiyama/kheiakiyama.github.com/actions"><img alt="kheiakiyama.github.com status" src="https://github.com/kheiakiyama/kheiakiyama.github.com/actions/workflows/deploy.yml/badge.svg"></a>
 
 
+## Prerequisites
+- hugo
+
 ## develop
 - Check Hugo official page
 https://gohugo.io/getting-started/quick-start/
