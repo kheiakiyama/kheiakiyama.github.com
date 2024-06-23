@@ -43,6 +43,11 @@ certificates:
     date: "February 02, 2024 - February 02, 2027"
     link: https://www.credly.com/badges/08b35125-92fa-4869-b0ca-5b8c4f70b588
 
+  - title: "Terraform Associate (003)"
+    subtitle: HashiCorp, Terraform
+    date: "June 18, 2024 - June 18, 2026"
+    link: https://www.credly.com/badges/ec69e0b1-375d-4ce9-ae48-651bbde0fdb5
+
   - title: "Azure DevOps Engineer"
     subtitle: Microsoft, DevOps Engineer Expert
     date: "1 October 2020 - 1 October 2025"
@@ -55,7 +60,7 @@ certificates:
 
   - title: "Azure Developer Associate"
     subtitle: Microsoft, Azure Developer
-    date: "18 December 2021 - 18 December 2024"
+    date: "18 December 2021 - 18 December 2025"
     link: https://www.credly.com/badges/43ec0338-5f8e-4b24-9e27-6df16df95825
 
   - title: "Azure Data Engineer Associate"
