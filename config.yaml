@@ -50,7 +50,10 @@ params:
   css:
     - custom.scss
   header:
-    avatar: img/avatar.png
+    avatar: 
+      file: img/avatar.png
+      width: 142px
+      height: 140px
     contact: true
     tagline: true
     links:
