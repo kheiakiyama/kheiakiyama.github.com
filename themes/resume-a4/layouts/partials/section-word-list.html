@@ -3,13 +3,15 @@
 {{- if eq .Feature.style "list" -}}
 	<div class="item">
 	{{ range $data }}
+		<ul>
 		{{- if reflect.IsMap . -}}
 		{{- range .list -}}
 			<li>{{.}}</li>
 		{{- end -}}
 		{{- else -}}
-		<li>{{.}}</li>
+			<li>{{.}}</li>
 		{{- end -}}
+		</ul>
 	{{ end }}
 	</div>
 {{- else if eq .Feature.style "compact" -}}
@@ -29,9 +31,11 @@
 	{{ range $data }}
 	<div class="item">
 		<h2 class="item-title">{{ .groupName }}</h2>
-		{{ range .list }}
-		<li>{{.}}</li>
-		{{ end }}
+		<ul>
+			{{ range .list }}
+			<li>{{.}}</li>
+			{{ end }}
+		</ul>
 	</div>
 	{{ end }}
 {{- end -}}

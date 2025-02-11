@@ -4,8 +4,10 @@
 		{{- .name -}}
 		<span> - {{ .level }}</span>
 	</h2>
+	<ul>
 	{{ range .certificates }}
-	<li>{{.}}</li>
+		<li>{{.}}</li>
 	{{ end }}
+	</ul>
 </div>
 {{ end }}
