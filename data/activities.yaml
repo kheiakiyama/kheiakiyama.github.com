@@ -1,5 +1,9 @@
 
 activities:
+    - title: "Cloud Operator Days Tokyo 2025 | #speaker"
+      date: July 2025
+      link: https://cloudopsdays.com/archive/2025/ondemand/
+      details: How to improve speed / quality of infra operation
     - title: "install-azcopy(GitHub Action) | #code"
       date: Mar 2020 ~
       link: https://github.com/marketplace/actions/install-azcopy
