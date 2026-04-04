@@ -32,7 +32,7 @@ jobs:
         version: 'v10'
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     - name: Download hugo output
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@v8
       with:
         name: hugo
         path: ./hugo
