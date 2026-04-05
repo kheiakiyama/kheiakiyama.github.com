@@ -27,7 +27,7 @@ jobs:
     needs: build
     steps:
     - uses: actions/checkout@v6
-    - uses: kheiakiyama/install-azcopy-action@v1
+    - uses: kheiakiyama/install-azcopy-action@v1.0.10
       with: 
         version: 'v10'
         creds: ${{ secrets.AZURE_CREDENTIALS }}
