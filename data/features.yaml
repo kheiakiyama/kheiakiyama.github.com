@@ -75,12 +75,12 @@ certificates:
     
   - title: "AZ-204"
     subtitle: Microsoft, Azure Developer
-    date: "18 December 2021 - 19 December 2026"
+    date: "18 December 2021 - 19 December 2026([This certifiacte was retired](https://techcommunity.microsoft.com/blog/skills-hub-blog/the-ai-job-boom-is-here-are-you-ready-to-showcase-your-skills/4494128))"
     link: https://learn.microsoft.com/api/credentials/share/ja-jp/kheiakiyama/3295CBB83F919E65?sharingId=81507E53C29BD12B
 
   - title: "DP-203"
     subtitle: Microsoft, Azure Data Engineer
-    date: "05 March 2022 - 06 March 2026(This certificate was terminated)"
+    date: "05 March 2022 - 06 March 2026([This certificate was retired](https://techcommunity.microsoft.com/blog/skills-hub-blog/prove-your-in-demand-data-engineering-skills-and-champion-ai-innovation/4240414))"
     link: https://learn.microsoft.com/api/credentials/share/ja-jp/kheiakiyama/2E162F15E57F9ABD?sharingId=81507E53C29BD12B
 
   - title: "DP-420"
