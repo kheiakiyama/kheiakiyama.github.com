@@ -45,7 +45,7 @@ certificates:
 
   - title: "Terraform Associate (003)"
     subtitle: HashiCorp, Terraform
-    date: "June 18, 2024 - June 18, 2026(This certificate was terminated)"
+    date: "June 18, 2024 - June 18, 2026(This certificate was expired)"
     link: https://www.credly.com/badges/ec69e0b1-375d-4ce9-ae48-651bbde0fdb5
 
   - title: "AZ-400"
@@ -68,23 +68,26 @@ certificates:
     date: "08 October 2022 - 08 October 2027"
     link: https://learn.microsoft.com/api/credentials/share/ja-jp/kheiakiyama/DA0C870E57D7B59E?sharingId=81507E53C29BD12B
     
-  - title: "AZ-500"
-    subtitle: Microsoft, Azure Security Engineer Associate
-    date: "26 March 2025 - 27 March 2027"
-    link: https://learn.microsoft.com/api/credentials/share/ja-jp/kheiakiyama/1D5E593BBE4AA880?sharingId=81507E53C29BD12B
-    
-  - title: "AZ-204"
-    subtitle: Microsoft, Azure Developer
-    date: "18 December 2021 - 19 December 2026([This certifiacte was retired](https://techcommunity.microsoft.com/blog/skills-hub-blog/the-ai-job-boom-is-here-are-you-ready-to-showcase-your-skills/4494128))"
-    link: https://learn.microsoft.com/api/credentials/share/ja-jp/kheiakiyama/3295CBB83F919E65?sharingId=81507E53C29BD12B
-
-  - title: "DP-203"
-    subtitle: Microsoft, Azure Data Engineer
-    date: "05 March 2022 - 06 March 2026([This certificate was retired](https://techcommunity.microsoft.com/blog/skills-hub-blog/prove-your-in-demand-data-engineering-skills-and-champion-ai-innovation/4240414))"
-    link: https://learn.microsoft.com/api/credentials/share/ja-jp/kheiakiyama/2E162F15E57F9ABD?sharingId=81507E53C29BD12B
-
   - title: "DP-420"
     subtitle: Microsoft, Azure Cosmos DB Developer
     date: "04 July 2022 - 04 July 2027"
     link: https://learn.microsoft.com/api/credentials/share/ja-jp/kheiakiyama/EC9EFBD5480DF229?sharingId=81507E53C29BD12B
+    
+  - title: "AZ-500"
+    subtitle: Microsoft, Azure Security Engineer Associate
+    date: "26 March 2025 - 27 March 2027(This certifiacte was retired)"
+    # https://techcommunity.microsoft.com/blog/skills-hub-blog/the-ai-job-boom-is-here-are-you-ready-to-showcase-your-skills/4494128
+    link: https://learn.microsoft.com/api/credentials/share/ja-jp/kheiakiyama/1D5E593BBE4AA880?sharingId=81507E53C29BD12B
+
+  - title: "AZ-204"
+    subtitle: Microsoft, Azure Developer
+    date: "18 December 2021 - 19 December 2026(This certifiacte was retired)"
+    # https://techcommunity.microsoft.com/blog/skills-hub-blog/the-ai-job-boom-is-here-are-you-ready-to-showcase-your-skills/4494128
+    link: https://learn.microsoft.com/api/credentials/share/ja-jp/kheiakiyama/3295CBB83F919E65?sharingId=81507E53C29BD12B
+
+  - title: "DP-203"
+    subtitle: Microsoft, Azure Data Engineer
+    date: "05 March 2022 - 06 March 2026(This certificate was retired)"
+    # https://techcommunity.microsoft.com/blog/skills-hub-blog/prove-your-in-demand-data-engineering-skills-and-champion-ai-innovation/4240414
+    link: https://learn.microsoft.com/api/credentials/share/ja-jp/kheiakiyama/2E162F15E57F9ABD?sharingId=81507E53C29BD12B
 
